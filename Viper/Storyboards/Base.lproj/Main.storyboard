@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfG-OL-VS1">
+                                <rect key="frame" x="142" y="408" width="130" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="RUE-Aq-Caa"/>
+                                    <constraint firstAttribute="height" constant="80" id="gCt-BN-6u3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DSc-I7-DjE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VfG-OL-VS1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3tj-Q8-foC"/>
+                            <constraint firstItem="VfG-OL-VS1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TuS-2U-XgH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="VfG-OL-VS1" id="BAM-fF-Km7"/>
+                        <segue destination="vlK-9B-3NC" kind="presentation" identifier="LoginToHome" modalPresentationStyle="fullScreen" id="EWU-2o-f0L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84"/>
+        </scene>
+        <!--Home View-->
+        <scene sceneID="EaP-1I-VUx">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="vlK-9B-3NC" customClass="HomeView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QyH-HR-fB8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTi-hb-7Yy">
+                                <rect key="frame" x="142" y="308" width="130" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="alz-eB-Tze"/>
+                                    <constraint firstAttribute="width" constant="130" id="bLC-5A-hGx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="logOutBtnPressed:" destination="vlK-9B-3NC" eventType="touchUpInside" id="GGO-Rc-QAf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNH-Qs-5P0">
+                                <rect key="frame" x="107" y="508" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="jwx-lQ-nyN"/>
+                                    <constraint firstAttribute="height" constant="80" id="yS9-vs-pf5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="showPhotoBtnPressed:" destination="vlK-9B-3NC" eventType="touchUpInside" id="5PP-bM-tFN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X8J-od-8NG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HNH-Qs-5P0" firstAttribute="centerY" secondItem="QyH-HR-fB8" secondAttribute="centerY" constant="100" id="Dk9-Ki-eBx"/>
+                            <constraint firstItem="uTi-hb-7Yy" firstAttribute="centerX" secondItem="QyH-HR-fB8" secondAttribute="centerX" id="oki-E7-ZT7"/>
+                            <constraint firstItem="HNH-Qs-5P0" firstAttribute="centerX" secondItem="QyH-HR-fB8" secondAttribute="centerX" id="pA5-gi-1nS"/>
+                            <constraint firstItem="uTi-hb-7Yy" firstAttribute="centerY" secondItem="QyH-HR-fB8" secondAttribute="centerY" constant="-100" id="vmo-DQ-1WB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6dT-xA-u7O"/>
+                    <connections>
+                        <outlet property="logOutBtn" destination="uTi-hb-7Yy" id="XYh-Ek-3XU"/>
+                        <outlet property="showPhotoBtn" destination="HNH-Qs-5P0" id="6rW-4M-Lfo"/>
+                        <segue destination="IqF-IV-89v" kind="presentation" identifier="HomeToPhoto" modalPresentationStyle="fullScreen" id="wyP-it-bcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcs-9d-SZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="84"/>
+        </scene>
+        <!--Home View-->
+        <scene sceneID="5Ad-QV-vaW">
+            <objects>
+                <viewController id="IqF-IV-89v" customClass="HomeView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWR-Zg-MDl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RWt-h5-RIo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRM-Xq-JY1">
+                                <rect key="frame" x="20" y="64" width="86.5" height="46.5"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="photoDoneBtnPressed:" destination="IqF-IV-89v" eventType="touchUpInside" id="X81-Y8-Pjd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IAY-60-Amu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TRM-Xq-JY1" firstAttribute="top" secondItem="IAY-60-Amu" secondAttribute="top" constant="20" id="Ho4-Em-BVJ"/>
+                            <constraint firstItem="RWt-h5-RIo" firstAttribute="leading" secondItem="IAY-60-Amu" secondAttribute="leading" id="Jpd-zQ-XL4"/>
+                            <constraint firstItem="IAY-60-Amu" firstAttribute="trailing" secondItem="RWt-h5-RIo" secondAttribute="trailing" id="PUC-ZW-aOW"/>
+                            <constraint firstItem="IAY-60-Amu" firstAttribute="bottom" secondItem="RWt-h5-RIo" secondAttribute="bottom" id="fVA-bV-nfw"/>
+                            <constraint firstItem="RWt-h5-RIo" firstAttribute="top" secondItem="IAY-60-Amu" secondAttribute="top" id="n6f-Yk-nca"/>
+                            <constraint firstItem="TRM-Xq-JY1" firstAttribute="leading" secondItem="IAY-60-Amu" secondAttribute="leading" constant="20" id="qHl-TY-6q8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PhotoImageView" destination="RWt-h5-RIo" id="e70-mc-a7k"/>
+                        <outlet property="photoDoneBtn" destination="TRM-Xq-JY1" id="UYe-Gv-tBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48T-kQ-wgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
