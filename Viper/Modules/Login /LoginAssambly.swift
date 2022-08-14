@@ -10,11 +10,9 @@ import UIKit
 
 protocol LoginAssemblyProtocol: class {
     func configure(view: LoginView)
-    
 }
 
 class LoginAssembly: LoginAssemblyProtocol {
-    
     weak var presenter: LoginPresenterProtocol?
     
     func configure(view: LoginView) {

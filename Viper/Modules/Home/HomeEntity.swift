@@ -14,7 +14,8 @@ protocol HomeEntityProtocol {
 }
 
 struct HomeEntity: HomeEntityProtocol {
-    var logOutBtnImage: UIImage {get {return UIImage(imageLiteralResourceName: "Logout")}}
+    
+    var logOutBtnImage: UIImage {get {return UIImage(imageLiteralResourceName: "logout")}}
     
     var showPhotoBtnImage: UIImage {get {return UIImage(imageLiteralResourceName: "showImage")}}
     

@@ -42,7 +42,9 @@ extension LoginView: LoginViewProtocol{
     
     func setLoginbuttonImage(image: UIImage) {
         
-        loginBtn.setBackgroundImage(image, for: .normal)
+//        loginBtn.setBackgroundImage(image, for: .normal)
+        loginBtn.setImage(image, for: .normal)
+        
         
     }
 }

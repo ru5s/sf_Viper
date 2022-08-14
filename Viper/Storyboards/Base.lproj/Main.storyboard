@@ -91,17 +91,18 @@
                     <connections>
                         <outlet property="logOutBtn" destination="uTi-hb-7Yy" id="XYh-Ek-3XU"/>
                         <outlet property="showPhotoBtn" destination="HNH-Qs-5P0" id="6rW-4M-Lfo"/>
-                        <segue destination="IqF-IV-89v" kind="presentation" identifier="HomeToPhoto" modalPresentationStyle="fullScreen" id="wyP-it-bcE"/>
+                        <segue destination="IqF-IV-89v" kind="presentation" identifier="HomeToPhoto" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="wyP-it-bcE"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToFirstPage" modalPresentationStyle="fullScreen" id="2c2-RI-trB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcs-9d-SZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="814" y="84"/>
         </scene>
-        <!--Home View-->
+        <!--Photo View-->
         <scene sceneID="5Ad-QV-vaW">
             <objects>
-                <viewController id="IqF-IV-89v" customClass="HomeView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IqF-IV-89v" customClass="PhotoView" customModule="Viper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aWR-Zg-MDl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,13 +112,14 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRM-Xq-JY1">
                                 <rect key="frame" x="20" y="64" width="86.5" height="46.5"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="photoDoneBtnPressed:" destination="IqF-IV-89v" eventType="touchUpInside" id="X81-Y8-Pjd"/>
+                                    <action selector="photoDoneBtnPressed:" destination="IqF-IV-89v" eventType="touchUpInside" id="AWE-oP-Uuf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,8 +135,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="PhotoImageView" destination="RWt-h5-RIo" id="e70-mc-a7k"/>
-                        <outlet property="photoDoneBtn" destination="TRM-Xq-JY1" id="UYe-Gv-tBg"/>
+                        <outlet property="photoDoneBtn" destination="TRM-Xq-JY1" id="O7c-V2-7QL"/>
+                        <outlet property="photoImageView" destination="RWt-h5-RIo" id="Zyr-E4-DN5"/>
+                        <segue destination="vlK-9B-3NC" kind="presentation" identifier="fromPhotoToHome" modalPresentationStyle="fullScreen" id="M3a-2g-8be"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48T-kQ-wgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -142,9 +145,15 @@
             <point key="canvasLocation" x="1593" y="84"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EWU-2o-f0L"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

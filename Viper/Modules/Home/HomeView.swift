@@ -20,22 +20,23 @@ class HomeView: UIViewController {
     
     @IBOutlet weak var showPhotoBtn: UIButton!
     
-    let homeSegueIdentifier = "HomeToPhoto"
+    let homeSegueIdentifier = "backToFirstPage"
+    
     var presenter: HomePresenterProtocol!
     var assembler: HomeAssemblyProtocol = HomeAssembly()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        assembler.configureView(view: self)
         presenter.configureView()
         
     }
     @IBAction func logOutBtnPressed(_ sender: Any) {
-        
+        presenter.pressedLogOutBtn()
     }
     
     @IBAction func showPhotoBtnPressed(_ sender: Any) {
-        
+        presenter.pressedShowPhotoBtn()
     }
     
 
@@ -43,11 +44,12 @@ class HomeView: UIViewController {
 
 extension HomeView: HomeViewProtocol {
     func setLogOutImage(image: UIImage) {
-        logOutBtn.setBackgroundImage(image, for: .normal)
+        logOutBtn.setImage(image, for: .normal)
+        
     }
     
     func setShowPhoto(image: UIImage) {
-        showPhotoBtn.setBackgroundImage(image, for: .normal)
+        showPhotoBtn.setImage(image, for: .normal)
     }
     
     
